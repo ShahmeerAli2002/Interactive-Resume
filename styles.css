@@ -1,0 +1,288 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+  }
+
+  .resume {
+      display: flex;
+      flex-direction: row;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border: none;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 90vh;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .resume:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  }
+
+  .left-section {
+      flex: 0 0 180px;
+      background: linear-gradient(145deg, #6a11cb, #2575fc);
+      color: #fff;
+      padding: 15px;
+      position: relative;
+      transition: all 0.3s ease;
+  }
+
+  .left-section:hover {
+      background: linear-gradient(145deg, #2575fc, #6a11cb);
+  }
+
+  .right-section {
+      flex: 1;
+      background-color: #fff;
+      padding: 20px;
+      overflow-y: auto;
+      max-height: 100vh;
+      transition: background-color 0.3s ease;
+  }
+
+  .right-section:hover {
+      background-color: #f8f9fa;
+  }
+
+  .profile-pic {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 12px auto;
+      display: block;
+      border: 3px solid rgba(255,255,255,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: all 0.4s ease;
+  }
+
+  .profile-pic:hover {
+      transform: scale(1.1) rotate(5deg);
+      border: 3px solid #2575fc;
+  }
+
+  .about, .skills-section, .contact-section {
+      margin-top: 12px;
+      padding: 12px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+  }
+
+  .about:hover, .skills-section:hover, .contact-section:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-3px);
+  }
+
+  .me {
+      color: #00ff88;
+      font-size: 1em;
+      margin-bottom: 6px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+
+  button {
+      background-color: #00ff88;
+      color: #1a1a1a;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      width: 100%;
+      min-width: fit-content;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+  }
+
+  button:hover {
+      background-color: #2575fc;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .skills-section ul {
+      list-style-type: none;
+      color: #fff;
+  }
+
+  .skills-section ul li {
+      margin: 6px 0;
+      padding: 5px 10px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 11px;
+      cursor: pointer;
+  }
+
+  .skills-section ul li:hover {
+      transform: translateX(8px);
+      background: rgba(37, 117, 252, 0.4);
+      padding-left: 15px;
+  }
+
+  .contact-section {
+      background: rgba(0,0,0,0.25);
+      color: #00ff88;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 11px;
+      transition: all 0.3s ease;
+  }
+
+  .contact-section:hover {
+      background: rgba(0,0,0,0.35);
+      transform: translateY(-3px);
+  }
+
+  h1 {
+      font-size: 1.8em;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  h2 {
+      color: #6a11cb;
+      margin-top: 15px;
+      font-size: 1.3em;
+      border-bottom: 2px solid #2575fc;
+      padding-bottom: 6px;
+      transition: all 0.3s ease;
+  }
+
+  h2:hover {
+      color: #2575fc;
+      border-bottom-width: 3px;
+  }
+
+  .experience-item, .education-item {
+      border-left: 3px solid #2575fc;
+      padding: 15px;
+      margin-bottom: 15px;
+      background: #f8f9fa;
+      border-radius: 0 12px 12px 0;
+      transition: all 0.3s ease;
+  }
+
+  .experience-item:hover, .education-item:hover {
+      transform: translateX(8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      border-left: 5px solid #6a11cb;
+      background: linear-gradient(to right, #f8f9fa, #ffffff);
+  }
+
+  p {
+      color: #f0e7e7;
+      line-height: 1.6;
+      font-size: 12px;
+  }
+
+  @media screen and (max-width: 768px) {
+      .resume {
+          flex-direction: row;
+          margin: 10px;
+          max-width: 600px;
+      }
+
+      .left-section {
+          flex: 0 0 140px;
+      }
+
+      .profile-pic {
+          width: 70px;
+          height: 70px;
+      }
+
+      * {
+          font-size: 12px;
+      }
+
+      h1 {
+          font-size: 1.5em;
+      }
+
+      h2 {
+          font-size: 1.1em;
+      }
+  }
+
+  @media screen and (max-width: 480px) {
+      .resume {
+          flex-direction: row;
+          margin: 5px;
+          max-width: 450px;
+      }
+
+      .left-section {
+          flex: 0 0 120px;
+      }
+
+      .profile-pic {
+          width: 60px;
+          height: 60px;
+      }
+
+      * {
+          font-size: 11px;
+      }
+
+      h1 {
+          font-size: 1.3em;
+      }
+
+      h2 {
+          font-size: 1em;
+      }
+
+      .left-section, .right-section {
+          padding: 10px;
+      }
+  }
+
+  .resume {
+      animation: fadeIn 1s ease-out;
+  }
+
+  @keyframes fadeIn {
+      from { 
+          opacity: 0; 
+          transform: translateY(20px); 
+      }
+      to { 
+          opacity: 1; 
+          transform: translateY(0); 
+      }
+  }
+
+  .experience-item, .education-item {
+      animation: slideIn 0.5s ease-out;
+  }
+
+  @keyframes slideIn {
+      from {
+          opacity: 0;
+          transform: translateX(-20px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
